@@ -122,14 +122,14 @@ export default function App() {
                 id="table-search-users"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-green-500 focus:border-green-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                className="block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:outline-none focus:border-transparent focus:ring-1 focus:ring-green-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
                 placeholder="Search all products"
               />
             </div>
 
             <button
               type="button"
-              className="inline-flex items-center w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-gray-100 ml-2"
+              className="inline-flex items-center w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:border-transparent focus:ring-1 focus:ring-green-500 ml-2"
               id="menu-button"
               aria-expanded="true"
               aria-haspopup="true"
@@ -198,7 +198,10 @@ export default function App() {
                       onChange={() => handleItemSelection(item)}
                       className="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 rounded focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                     />
-                    <label htmlFor="checkbox-table-search-1" className="sr-only">
+                    <label
+                      htmlFor="checkbox-table-search-1"
+                      className="sr-only"
+                    >
                       checkbox
                     </label>
                   </div>
@@ -219,22 +222,29 @@ export default function App() {
                   </div>
                 </th>
                 <td className="px-6 py-4">
-                  <div className="flex items-center">
+                  <div
+                    className={`inline-flex items-center text-xs font-medium px-2.5 py-0.5 rounded-full 
+                      ${(() => {
+                        if (item.status == "active") {
+                          return "bg-green-100 text-green-800";
+                        } else if (item.status == "draft") {
+                          return "bg-orange-100 text-orange-800";
+                        } else {
+                          return "bg-red-100 text-red-800";
+                        }
+                      })()}`}
+                  >
                     <div
-                      className={`h-2.5 w-2.5 rounded-full 
-                    
-                    ${(() => {
-                      if (item.status == "active") {
-                        return "bg-green-500";
-                      } else if (item.status == "draft") {
-                        return "bg-orange-400";
-                      } else {
-                        return "bg-red-500";
-                      }
-                    })()}
-                    
-                    
-                    mr-2`}
+                      className={`w-2 h-2 rounded-full mr-2 
+                          ${(() => {
+                            if (item.status == "active") {
+                              return "bg-green-500";
+                            } else if (item.status == "draft") {
+                              return "bg-orange-400";
+                            } else {
+                              return "bg-red-500";
+                            }
+                          })()}`}
                     ></div>{" "}
                     {item?.status.charAt(0).toUpperCase() +
                       item.status.slice(1)}
