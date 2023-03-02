@@ -5,7 +5,7 @@ import {
   PencilSquareIcon,
 } from "@heroicons/react/20/solid";
 import { useState, useEffect } from "react";
-import productData from "./assets/productJSON";
+import productData from "./assets/products";
 
 const itemsPerPage = 10;
 
@@ -73,12 +73,12 @@ export default function App() {
 
   return (
     <>
-      <h1 className="text-2xl font-semibold text-green-800 px-4 py-4">
+      <h1 className="text-2xl font-semibold text-green-800 px-6 py-4">
         Products
       </h1>
 
       <div className="relative overflow-x-auto text-center">
-        <div className="flex items-center justify-between px-4 py-4 bg-white dark:bg-gray-800">
+        <div className="flex items-center justify-between px-6 py-4 bg-white dark:bg-gray-800">
           <ul className="flex flex-wrap text-sm font-medium text-center text-gray-500 dark:text-gray-400">
             {statusTabs.map((category) => (
               <li
@@ -146,7 +146,7 @@ export default function App() {
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
-              <th scope="col" className="p-4">
+              <th scope="col" className="pl-6 py-4">
                 <div className="flex items-center">
                   <input
                     id="checkbox-all-search"
@@ -187,7 +187,7 @@ export default function App() {
                     : "bg-white"
                 }`}
               >
-                <td className="w-4 p-4">
+                <td className="w-4 pl-6 py-4">
                   <div className="flex items-center">
                     <input
                       id="checkbox-table-search-1"
