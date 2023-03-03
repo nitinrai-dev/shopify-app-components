@@ -144,7 +144,7 @@ export default function App() {
         </div>
 
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+          <thead className={`text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 ${selectedProducts.length > 0 ? 'bg-green-100 ' : ''}`}>
             <tr>
               <th scope="col" className="pl-6 py-4">
                 <div className="flex items-center">
@@ -160,21 +160,29 @@ export default function App() {
                   </label>
                 </div>
               </th>
-              <th scope="col" className="px-6 py-3">
-                Product
-              </th>
-              <th scope="col" className="px-6 py-3">
-                Status
-              </th>
-              <th scope="col" className="px-6 py-3">
-                Type
-              </th>
-              <th scope="col" className="px-6 py-3">
-                Vendor
-              </th>
-              <th scope="col" className="px-6 py-3">
-                Action
-              </th>
+              {selectedProducts.length > 0 ? (
+                <th scope="col" colspan="5" className="px-6 py-3">
+                  {selectedProducts.length} products selected.
+                </th>
+              ) : (
+                <>
+                  <th scope="col" className="px-6 py-3">
+                    Product
+                  </th>
+                  <th scope="col" className="px-6 py-3">
+                    Status
+                  </th>
+                  <th scope="col" className="px-6 py-3">
+                    Type
+                  </th>
+                  <th scope="col" className="px-6 py-3">
+                    Vendor
+                  </th>
+                  <th scope="col" className="px-6 py-3">
+                    Action
+                  </th>
+                </>
+              )}
             </tr>
           </thead>
           <tbody>
@@ -183,7 +191,7 @@ export default function App() {
                 key={item.id}
                 className={`border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 ${
                   selectedProducts.some((selection) => selection.id === item.id)
-                    ? "bg-green-50"
+                    ? "bg-green-50 hover:bg-green-100"
                     : "bg-white"
                 }`}
               >
