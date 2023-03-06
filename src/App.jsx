@@ -136,7 +136,7 @@ export default function App() {
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                   className="block w-full lg:w-80 p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-1 focus:ring-green-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                  placeholder="Search all products"
+                  placeholder={`Search ${selectedCategory} products`}
                 />
               </div>
 
@@ -306,7 +306,7 @@ export default function App() {
 
           <div className="flex items-center justify-between px-4">
             <p>
-              Showing {currentPage}-{filteredData.length / itemsPerPage} of{" "}
+              Showing {currentPage}-{Math.ceil(filteredData.length / itemsPerPage)} of{" "}
               {filteredData.length} items.
             </p>
 
@@ -355,34 +355,34 @@ export default function App() {
         setIsOpen={setIsDrawerOpen}
       >
         <form className="mt-4 border-t border-gray-200">
-          <h3 className="sr-only">Categories</h3>
-          <ul role="list" className="px-2 py-3 font-medium text-gray-900">
-            {productTypes.map((item, index) => (
-                <li key={index}>
-                  <a href="#" className="block px-2 py-3">
-                    {item}
-                  </a>
-                </li>
-              ))}
-          </ul>
+          <div className="px-4 py-6">
+            <h3 className="font-medium text-gray-900">Type</h3>
+            <div className="pt-6">
+                <div className="space-y-4">
+                {productTypes.map((item, index) => (
+                  <div className="flex items-center" key={index}>
+                    <input
+                      name={item-index}
+                      value={item}
+                      type="checkbox"
+                      className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                    />
+                    <label className="ml-3 min-w-0 flex-1 text-gray-500">
+                      {item.charAt(0).toUpperCase() + item.slice(1).toLowerCase()}
+                    </label>
+                  </div>
+                ))}
+                </div>
+              </div>
+          </div>
 
           {productOptions.map((option, index) => (
             <div className="border-t border-gray-200 px-4 py-6" key={index}>
-              <h3 className="-mx-2 -my-3 flow-root">
-                <button
-                  type="button"
-                  className="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500"
-                  aria-controls="filter-section-mobile-0"
-                  aria-expanded="false"
-                >
-                  <span className="font-medium text-gray-900">{option}</span>
-                </button>
-              </h3>
-              <div className="pt-6" id="filter-section-mobile-0">
-                <div className="space-y-6">
+              <h3 className="font-medium text-gray-900">{option}</h3>
+              <div className="pt-6">
+                <div className="space-y-4">
                   <div className="flex items-center">
                     <input
-                      id="filter-mobile-color-1"
                       name="color[]"
                       value="beige"
                       type="checkbox"
@@ -398,7 +398,6 @@ export default function App() {
 
                   <div className="flex items-center">
                     <input
-                      id="filter-mobile-color-2"
                       name="color[]"
                       value="blue"
                       type="checkbox"
@@ -414,7 +413,6 @@ export default function App() {
 
                   <div className="flex items-center">
                     <input
-                      id="filter-mobile-color-3"
                       name="color[]"
                       value="brown"
                       type="checkbox"
