@@ -18,9 +18,13 @@ export default function App() {
   const [selectedProducts, setSelectedProducts] = useState([]);
   const [search, setSearch] = useState("");
 
-  const productStatus = [...new Set(productData.map(product => product.status))]
-  productStatus.unshift('all');
-  const productTypes = [...new Set(productData.map(product => product.product_type))];
+  const productStatus = [
+    ...new Set(productData.map((product) => product.status)),
+  ];
+  productStatus.unshift("all");
+  const productTypes = [
+    ...new Set(productData.map((product) => product.product_type)),
+  ];
   const productOptions = productData.reduce((options, product) => {
     product.options.forEach((option) => {
       if (!options.includes(option.name)) {
@@ -85,7 +89,7 @@ export default function App() {
 
   return (
     <>
-      <div className="product--board">
+      <div className="relative top-16 product--board bg-gray-50">
         <h1 className="text-2xl font-semibold text-green-800 px-6 py-4">
           Products
         </h1>
@@ -135,7 +139,7 @@ export default function App() {
                   id="table-search-users"
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
-                  className="block w-full lg:w-80 p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none focus:border-transparent focus:ring-1 focus:ring-green-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                  className="block w-full lg:w-80 p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg focus:outline-none focus:border-transparent focus:ring-1 focus:ring-green-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
                   placeholder={`Search ${selectedCategory} products`}
                 />
               </div>
@@ -306,7 +310,8 @@ export default function App() {
 
           <div className="flex items-center justify-between px-4">
             <p>
-              Showing {currentPage}-{Math.ceil(filteredData.length / itemsPerPage)} of{" "}
+              Showing {currentPage}-
+              {Math.ceil(filteredData.length / itemsPerPage)} of{" "}
               {filteredData.length} items.
             </p>
 
@@ -351,29 +356,30 @@ export default function App() {
 
       <Drawer
         isOpen={isDrawerOpen}
-        drawerTitle={"Filter"}
+        drawerTitle={`Filters (${productData.length} products)`}
         setIsOpen={setIsDrawerOpen}
       >
         <form className="mt-4 border-t border-gray-200">
           <div className="px-4 py-6">
             <h3 className="font-medium text-gray-900">Type</h3>
             <div className="pt-6">
-                <div className="space-y-4">
+              <div className="space-y-4">
                 {productTypes.map((item, index) => (
                   <div className="flex items-center" key={index}>
                     <input
-                      name={item-index}
+                      name={item}
                       value={item}
                       type="checkbox"
                       className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                     />
                     <label className="ml-3 min-w-0 flex-1 text-gray-500">
-                      {item.charAt(0).toUpperCase() + item.slice(1).toLowerCase()}
+                      {item.charAt(0).toUpperCase() +
+                        item.slice(1).toLowerCase()}
                     </label>
                   </div>
                 ))}
-                </div>
               </div>
+            </div>
           </div>
 
           {productOptions.map((option, index) => (
@@ -430,6 +436,20 @@ export default function App() {
             </div>
           ))}
 
+          <div className="w-full fixed bottom-0 inset-x-0 bg-gray-50 p-4 flex items-center gap-2">
+            <button
+              type="button"
+              className="flex-1 py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100"
+            >
+              Reset
+            </button>
+            <button
+              type="button"
+              className="flex-[2] focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+            >
+              Apply Filter
+            </button>
+          </div>
         </form>
       </Drawer>
     </>

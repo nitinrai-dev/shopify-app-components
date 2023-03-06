@@ -10,9 +10,6 @@ body {
   position: relative;
 }
 .product--board {
-  position: relative;
-  top: 4rem;
-  background: #f3f4f5;
   width: calc(100vw - 8rem);
   height: calc(100vh - 8rem);
   overflow: auto;
