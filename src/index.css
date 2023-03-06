@@ -4,12 +4,18 @@
 
 body {
   background: #d3d5d7;
-  padding: 4rem;
   margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
-#root {
+.product--board {
+  position: relative;
+  top: 4rem;
   background: #f3f4f5;
+  width: calc(100vw - 8rem);
   height: calc(100vh - 8rem);
   overflow: auto;
   border-radius: 6px;
+  margin-inline: auto;
 }
