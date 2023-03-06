@@ -99,7 +99,7 @@ export default function App() {
   return (
     <>
       <div className="relative top-16 product--board bg-gray-50">
-        <div className="flex items-center justify-between px-6 py-4">
+        <div className="flex items-center justify-between px-3 py-4 md:px-6">
           <h2 className="text-2xl font-semibold text-green-800">
             Store Products
           </h2>
@@ -112,7 +112,7 @@ export default function App() {
         </div>
 
         <div className="relative overflow-x-auto text-center">
-          <div className="flex items-start lg:items-center justify-between px-6 py-4 bg-white dark:bg-gray-800 flex-col-reverse gap-y-3 lg:flex-row">
+          <div className="flex items-start lg:items-center justify-between px-3 py-4 md:px-6 bg-white dark:bg-gray-800 flex-col-reverse gap-y-3 lg:flex-row">
             <ul className="flex flex-wrap text-sm font-medium text-center text-gray-500 dark:text-gray-400">
               {productStatus.map((category) => (
                 <li
@@ -184,7 +184,7 @@ export default function App() {
                 }`}
               >
                 <tr>
-                  <th scope="col" className="pl-6 py-4">
+                  <th scope="col" className="pl-3 py-4 md:pl-6">
                     <div className="flex items-center">
                       <input
                         id="checkbox-all-search"
@@ -199,25 +199,28 @@ export default function App() {
                     </div>
                   </th>
                   {selectedProducts.length > 0 ? (
-                    <th scope="col" colspan="5" className="px-6 py-3">
+                    <th scope="col" colspan="5" className="px-3 py-3 md:px-6">
                       {selectedProducts.length}{" "}
                       <span className="lowercase">products selected.</span>
                     </th>
                   ) : (
                     <>
-                      <th scope="col" className="px-6 py-3">
+                      <th scope="col" className="px-3 py-3 md:px-6">
                         Product
                       </th>
-                      <th scope="col" className="px-6 py-3">
+                      <th scope="col" className="px-3 py-3 md:px-6">
                         Status
                       </th>
-                      <th scope="col" className="px-6 py-3">
+                      <th scope="col" className="px-3 py-3 md:px-6">
                         Type
                       </th>
-                      <th scope="col" className="px-6 py-3">
+                      <th scope="col" className="px-3 py-3 md:px-6">
                         Vendor
                       </th>
-                      <th scope="col" className="px-6 py-3">
+                      <th scope="col" className="px-3 py-3 md:px-6">
+                        Variants
+                      </th>
+                      <th scope="col" className="px-3 py-3 md:px-6">
                         Action
                       </th>
                     </>
@@ -236,7 +239,7 @@ export default function App() {
                         : "bg-white"
                     }`}
                   >
-                    <td className="w-4 pl-6 py-4">
+                    <td className="w-4 pl-3 py-4 md:pl-6">
                       <div className="flex items-center">
                         <input
                           id="checkbox-table-search-1"
@@ -257,14 +260,14 @@ export default function App() {
                     </td>
                     <th
                       scope="row"
-                      className="flex items-center px-6 py-4 text-gray-900 dark:text-white cursor-pointer"
+                      className="w-max flex items-center px-3 py-4 md:px-6 text-gray-900 dark:text-white cursor-pointer"
                     >
                       <img
                         className="w-10 h-10 rounded-full object-cover border border-gray-300"
                         src={item.image?.src}
                       />
                       <div className="pl-3">
-                        <div className="text-base font-semibold min-w-[25ch]">
+                        <div className="text-base font-semibold min-w-[25ch] max-w-min">
                           {item?.title}
                         </div>
                         <div className="font-normal text-gray-500">
@@ -272,7 +275,7 @@ export default function App() {
                         </div>
                       </div>
                     </th>
-                    <td className="px-6 py-4">
+                    <td className="px-3 py-4 md:px-6">
                       <div
                         className={`inline-flex items-center text-xs font-medium px-2.5 py-0.5 rounded-full 
                         ${(() => {
@@ -301,9 +304,10 @@ export default function App() {
                           item.status.slice(1)}
                       </div>
                     </td>
-                    <td className="px-6 py-4">{item?.product_type}</td>
-                    <td className="px-6 py-4">{item?.vendor}</td>
-                    <td className="px-6 py-4">
+                    <td className="px-3 py-4 md:px-6">{item?.product_type}</td>
+                    <td className="px-3 py-4 md:px-6">{item?.vendor}</td>
+                    <td className="px-3 py-4 md:px-6">{item?.variants.length}</td>
+                    <td className="px-3 py-4 md:px-6">
                       {/* <!-- Modal toggle --> */}
                       <a
                         href="#"
