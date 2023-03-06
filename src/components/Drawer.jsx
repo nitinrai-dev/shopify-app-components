@@ -8,7 +8,7 @@ const Drawer = ({ isOpen, setIsOpen, drawerTitle, children }) => {
           <div
             className={`absolute top-0 left-0 transition-transform ${
               isOpen ? "translate-x-0" : "-translate-x-full"
-            } ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white py-4 pb-12 shadow-xl`}
+            } ml-auto flex h-full w-full max-w-xs flex-col overflow-y-auto bg-white pt-4 shadow-xl`}
           >
             <div className="flex items-center justify-between px-4">
               <h2 className="text-lg font-medium text-gray-900">

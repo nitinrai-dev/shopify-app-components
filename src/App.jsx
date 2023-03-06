@@ -25,10 +25,19 @@ export default function App() {
   const productTypes = [
     ...new Set(productData.map((product) => product.product_type)),
   ];
+
   const productOptions = productData.reduce((options, product) => {
     product.options.forEach((option) => {
-      if (!options.includes(option.name)) {
-        options.push(option.name);
+      const existingOption = options.find((o) => o.name === option.name);
+      const uniqueValues = [
+        ...new Set(product.options.find((o) => o.id === option.id).values),
+      ];
+      if (existingOption) {
+        existingOption.values = [
+          ...new Set([...existingOption.values, ...uniqueValues]),
+        ];
+      } else {
+        options.push({ name: option.name, values: uniqueValues });
       }
     });
     return options;
@@ -91,12 +100,14 @@ export default function App() {
     <>
       <div className="relative top-16 product--board bg-gray-50">
         <div className="flex items-center justify-between px-6 py-4">
-          <h2 className="text-2xl font-semibold text-green-800">Store Products</h2>
+          <h2 className="text-2xl font-semibold text-green-800">
+            Store Products
+          </h2>
           <button
-              type="button"
-              className="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-green-800 hover:text-white hover:border-green-800 transition-all"
-            >
-              Import Product
+            type="button"
+            className="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-green-800 hover:text-white hover:border-green-800 transition-all"
+          >
+            Import Product
           </button>
         </div>
 
@@ -365,7 +376,7 @@ export default function App() {
         drawerTitle={`Filters (${productData.length} products)`}
         setIsOpen={setIsDrawerOpen}
       >
-        <form className="mt-4 border-t border-gray-200">
+        <form className="relative mt-4 pb-20 border-t border-gray-200">
           <div className="px-4 py-6">
             <h3 className="font-medium text-gray-900">Type</h3>
             <div className="pt-6">
@@ -390,59 +401,32 @@ export default function App() {
 
           {productOptions.map((option, index) => (
             <div className="border-t border-gray-200 px-4 py-6" key={index}>
-              <h3 className="font-medium text-gray-900">{option}</h3>
+              <h3 className="font-medium text-gray-900">{option.name}</h3>
               <div className="pt-6">
                 <div className="space-y-4">
-                  <div className="flex items-center">
-                    <input
-                      name="color[]"
-                      value="beige"
-                      type="checkbox"
-                      className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                    />
-                    <label
-                      htmlFor="filter-mobile-color-1"
-                      className="ml-3 min-w-0 flex-1 text-gray-500"
-                    >
-                      Beige
-                    </label>
-                  </div>
-
-                  <div className="flex items-center">
-                    <input
-                      name="color[]"
-                      value="blue"
-                      type="checkbox"
-                      className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                    />
-                    <label
-                      htmlFor="filter-mobile-color-2"
-                      className="ml-3 min-w-0 flex-1 text-gray-500"
-                    >
-                      Blue
-                    </label>
-                  </div>
-
-                  <div className="flex items-center">
-                    <input
-                      name="color[]"
-                      value="brown"
-                      type="checkbox"
-                      className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
-                    />
-                    <label
-                      htmlFor="filter-mobile-color-3"
-                      className="ml-3 min-w-0 flex-1 text-gray-500"
-                    >
-                      Brown
-                    </label>
-                  </div>
+                  {option.values.map((value) => (
+                    <div className="flex items-center" key={value}>
+                      <input
+                        name="color[]"
+                        value="beige"
+                        type="checkbox"
+                        className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                      />
+                      <label
+                        htmlFor="filter-mobile-color-1"
+                        className="ml-3 min-w-0 flex-1 text-gray-500"
+                      >
+                        {value.charAt(0).toUpperCase() +
+                        value.slice(1).toLowerCase()}
+                      </label>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
           ))}
 
-          <div className="w-full fixed bottom-0 inset-x-0 bg-gray-50 p-4 flex items-center gap-2">
+          <div className="w-full absolute bottom-0 inset-x-0 bg-gray-50 p-4 flex items-center gap-2">
             <button
               type="button"
               className="flex-1 py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100"
