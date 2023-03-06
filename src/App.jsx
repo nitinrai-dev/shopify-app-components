@@ -90,9 +90,15 @@ export default function App() {
   return (
     <>
       <div className="relative top-16 product--board bg-gray-50">
-        <h1 className="text-2xl font-semibold text-green-800 px-6 py-4">
-          Products
-        </h1>
+        <div className="flex items-center justify-between px-6 py-4">
+          <h2 className="text-2xl font-semibold text-green-800">Store Products</h2>
+          <button
+              type="button"
+              className="py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-green-800 hover:text-white hover:border-green-800 transition-all"
+            >
+              Import Product
+          </button>
+        </div>
 
         <div className="relative overflow-x-auto text-center">
           <div className="flex items-start lg:items-center justify-between px-6 py-4 bg-white dark:bg-gray-800 flex-col-reverse gap-y-3 lg:flex-row">
