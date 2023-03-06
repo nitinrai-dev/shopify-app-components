@@ -16,3 +16,12 @@ body {
   border-radius: 6px;
   margin-inline: auto;
 }
+
+@media (max-width: 650px) {
+.product--board {
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0;
+  top: 0
+}
+}
