@@ -1,0 +1,996 @@
+{
+    "orders": [
+      {
+        "id": 4942332690619,
+        "admin_graphql_api_id": "gid://shopify/Order/4942332690619",
+        "app_id": 1354745,
+        "browser_ip": null,
+        "buyer_accepts_marketing": false,
+        "cancel_reason": null,
+        "cancelled_at": null,
+        "cart_token": null,
+        "checkout_id": 26870640050363,
+        "checkout_token": "00fe167a9757d3befcd293ac55e8bf4f",
+        "client_details": {
+          "accept_language": null,
+          "browser_height": null,
+          "browser_ip": null,
+          "browser_width": null,
+          "session_hash": null,
+          "user_agent": null
+        },
+        "closed_at": null,
+        "confirmed": true,
+        "contact_email": null,
+        "created_at": "2023-03-10T11:53:51+05:30",
+        "currency": "INR",
+        "current_subtotal_price": "747.00",
+        "current_subtotal_price_set": {
+          "shop_money": {
+            "amount": "747.00",
+            "currency_code": "INR"
+          },
+          "presentment_money": {
+            "amount": "747.00",
+            "currency_code": "INR"
+          }
+        },
+        "current_total_discounts": "0.00",
+        "current_total_discounts_set": {
+          "shop_money": {
+            "amount": "0.00",
+            "currency_code": "INR"
+          },
+          "presentment_money": {
+            "amount": "0.00",
+            "currency_code": "INR"
+          }
+        },
+        "current_total_duties_set": null,
+        "current_total_price": "881.46",
+        "current_total_price_set": {
+          "shop_money": {
+            "amount": "881.46",
+            "currency_code": "INR"
+          },
+          "presentment_money": {
+            "amount": "881.46",
+            "currency_code": "INR"
+          }
+        },
+        "current_total_tax": "134.46",
+        "current_total_tax_set": {
+          "shop_money": {
+            "amount": "134.46",
+            "currency_code": "INR"
+          },
+          "presentment_money": {
+            "amount": "134.46",
+            "currency_code": "INR"
+          }
+        },
+        "customer_locale": null,
+        "device_id": null,
+        "discount_codes": [],
+        "email": "",
+        "estimated_taxes": false,
+        "financial_status": "paid",
+        "fulfillment_status": null,
+        "gateway": "manual",
+        "landing_site": null,
+        "landing_site_ref": null,
+        "location_id": 68443439291,
+        "name": "#1002",
+        "note": null,
+        "note_attributes": [],
+        "number": 2,
+        "order_number": 1002,
+        "order_status_url": "https://think-theme.myshopify.com/63281922235/orders/41aa7ea984918bf7183715a41469f783/authenticate?key=9b2ff4d608cd8643d931c82376e657cd",
+        "original_total_duties_set": null,
+        "payment_gateway_names": [
+          "manual"
+        ],
+        "phone": null,
+        "presentment_currency": "INR",
+        "processed_at": "2023-03-10T11:53:51+05:30",
+        "processing_method": "manual",
+        "reference": null,
+        "referring_site": null,
+        "source_identifier": null,
+        "source_name": "shopify_draft_order",
+        "source_url": null,
+        "subtotal_price": "747.00",
+        "subtotal_price_set": {
+          "shop_money": {
+            "amount": "747.00",
+            "currency_code": "INR"
+          },
+          "presentment_money": {
+            "amount": "747.00",
+            "currency_code": "INR"
+          }
+        },
+        "tags": "",
+        "tax_lines": [
+          {
+            "price": "134.46",
+            "rate": 0.18,
+            "title": "IGST",
+            "price_set": {
+              "shop_money": {
+                "amount": "134.46",
+                "currency_code": "INR"
+              },
+              "presentment_money": {
+                "amount": "134.46",
+                "currency_code": "INR"
+              }
+            },
+            "channel_liable": false
+          }
+        ],
+        "taxes_included": false,
+        "test": false,
+        "token": "41aa7ea984918bf7183715a41469f783",
+        "total_discounts": "0.00",
+        "total_discounts_set": {
+          "shop_money": {
+            "amount": "0.00",
+            "currency_code": "INR"
+          },
+          "presentment_money": {
+            "amount": "0.00",
+            "currency_code": "INR"
+          }
+        },
+        "total_line_items_price": "747.00",
+        "total_line_items_price_set": {
+          "shop_money": {
+            "amount": "747.00",
+            "currency_code": "INR"
+          },
+          "presentment_money": {
+            "amount": "747.00",
+            "currency_code": "INR"
+          }
+        },
+        "total_outstanding": "0.00",
+        "total_price": "881.46",
+        "total_price_set": {
+          "shop_money": {
+            "amount": "881.46",
+            "currency_code": "INR"
+          },
+          "presentment_money": {
+            "amount": "881.46",
+            "currency_code": "INR"
+          }
+        },
+        "total_price_usd": "10.75",
+        "total_shipping_price_set": {
+          "shop_money": {
+            "amount": "0.00",
+            "currency_code": "INR"
+          },
+          "presentment_money": {
+            "amount": "0.00",
+            "currency_code": "INR"
+          }
+        },
+        "total_tax": "134.46",
+        "total_tax_set": {
+          "shop_money": {
+            "amount": "134.46",
+            "currency_code": "INR"
+          },
+          "presentment_money": {
+            "amount": "134.46",
+            "currency_code": "INR"
+          }
+        },
+        "total_tip_received": "0.00",
+        "total_weight": 0,
+        "updated_at": "2023-03-10T11:53:52+05:30",
+        "user_id": 82209964219,
+        "discount_applications": [],
+        "fulfillments": [],
+        "line_items": [
+          {
+            "id": 12134495715515,
+            "admin_graphql_api_id": "gid://shopify/LineItem/12134495715515",
+            "fulfillable_quantity": 1,
+            "fulfillment_service": "manual",
+            "fulfillment_status": null,
+            "gift_card": false,
+            "grams": 0,
+            "name": "DR MARTENS | 1460Z DMC 8-EYE BOOT | CHERRY SMOOTH - 3 / red",
+            "origin_location": {
+              "id": 3530194256059,
+              "country_code": "IN",
+              "province_code": "UP",
+              "name": "Lucknow",
+              "address1": "Lucknow",
+              "address2": "",
+              "city": "Lucknow",
+              "zip": "226005"
+            },
+            "price": "249.00",
+            "price_set": {
+              "shop_money": {
+                "amount": "249.00",
+                "currency_code": "INR"
+              },
+              "presentment_money": {
+                "amount": "249.00",
+                "currency_code": "INR"
+              }
+            },
+            "product_exists": true,
+            "product_id": 7802795327675,
+            "properties": [],
+            "quantity": 1,
+            "requires_shipping": true,
+            "sku": "DM-03-red-3",
+            "taxable": true,
+            "title": "DR MARTENS | 1460Z DMC 8-EYE BOOT | CHERRY SMOOTH",
+            "total_discount": "0.00",
+            "total_discount_set": {
+              "shop_money": {
+                "amount": "0.00",
+                "currency_code": "INR"
+              },
+              "presentment_money": {
+                "amount": "0.00",
+                "currency_code": "INR"
+              }
+            },
+            "variant_id": 44514159100091,
+            "variant_inventory_management": "shopify",
+            "variant_title": "3 / red",
+            "vendor": "DR MARTENS",
+            "tax_lines": [
+              {
+                "channel_liable": false,
+                "price": "44.82",
+                "price_set": {
+                  "shop_money": {
+                    "amount": "44.82",
+                    "currency_code": "INR"
+                  },
+                  "presentment_money": {
+                    "amount": "44.82",
+                    "currency_code": "INR"
+                  }
+                },
+                "rate": 0.18,
+                "title": "IGST"
+              }
+            ],
+            "duties": [],
+            "discount_allocations": []
+          },
+          {
+            "id": 12134495748283,
+            "admin_graphql_api_id": "gid://shopify/LineItem/12134495748283",
+            "fulfillable_quantity": 1,
+            "fulfillment_service": "manual",
+            "fulfillment_status": null,
+            "gift_card": false,
+            "grams": 0,
+            "name": "DR MARTENS | 1460Z DMC 8-EYE BOOT | CHERRY SMOOTH - 6 / red",
+            "origin_location": {
+              "id": 3530194256059,
+              "country_code": "IN",
+              "province_code": "UP",
+              "name": "Lucknow",
+              "address1": "Lucknow",
+              "address2": "",
+              "city": "Lucknow",
+              "zip": "226005"
+            },
+            "price": "249.00",
+            "price_set": {
+              "shop_money": {
+                "amount": "249.00",
+                "currency_code": "INR"
+              },
+              "presentment_money": {
+                "amount": "249.00",
+                "currency_code": "INR"
+              }
+            },
+            "product_exists": true,
+            "product_id": 7802795327675,
+            "properties": [],
+            "quantity": 1,
+            "requires_shipping": true,
+            "sku": "DM-03-red-6",
+            "taxable": true,
+            "title": "DR MARTENS | 1460Z DMC 8-EYE BOOT | CHERRY SMOOTH",
+            "total_discount": "0.00",
+            "total_discount_set": {
+              "shop_money": {
+                "amount": "0.00",
+                "currency_code": "INR"
+              },
+              "presentment_money": {
+                "amount": "0.00",
+                "currency_code": "INR"
+              }
+            },
+            "variant_id": 44514159198395,
+            "variant_inventory_management": "shopify",
+            "variant_title": "6 / red",
+            "vendor": "DR MARTENS",
+            "tax_lines": [
+              {
+                "channel_liable": false,
+                "price": "44.82",
+                "price_set": {
+                  "shop_money": {
+                    "amount": "44.82",
+                    "currency_code": "INR"
+                  },
+                  "presentment_money": {
+                    "amount": "44.82",
+                    "currency_code": "INR"
+                  }
+                },
+                "rate": 0.18,
+                "title": "IGST"
+              }
+            ],
+            "duties": [],
+            "discount_allocations": []
+          },
+          {
+            "id": 12134495781051,
+            "admin_graphql_api_id": "gid://shopify/LineItem/12134495781051",
+            "fulfillable_quantity": 1,
+            "fulfillment_service": "manual",
+            "fulfillment_status": null,
+            "gift_card": false,
+            "grams": 0,
+            "name": "DR MARTENS | 1460Z DMC 8-EYE BOOT | CHERRY SMOOTH - 7 / red",
+            "origin_location": {
+              "id": 3530194256059,
+              "country_code": "IN",
+              "province_code": "UP",
+              "name": "Lucknow",
+              "address1": "Lucknow",
+              "address2": "",
+              "city": "Lucknow",
+              "zip": "226005"
+            },
+            "price": "249.00",
+            "price_set": {
+              "shop_money": {
+                "amount": "249.00",
+                "currency_code": "INR"
+              },
+              "presentment_money": {
+                "amount": "249.00",
+                "currency_code": "INR"
+              }
+            },
+            "product_exists": true,
+            "product_id": 7802795327675,
+            "properties": [],
+            "quantity": 1,
+            "requires_shipping": true,
+            "sku": "DM-03-red-7",
+            "taxable": true,
+            "title": "DR MARTENS | 1460Z DMC 8-EYE BOOT | CHERRY SMOOTH",
+            "total_discount": "0.00",
+            "total_discount_set": {
+              "shop_money": {
+                "amount": "0.00",
+                "currency_code": "INR"
+              },
+              "presentment_money": {
+                "amount": "0.00",
+                "currency_code": "INR"
+              }
+            },
+            "variant_id": 44514159231163,
+            "variant_inventory_management": "shopify",
+            "variant_title": "7 / red",
+            "vendor": "DR MARTENS",
+            "tax_lines": [
+              {
+                "channel_liable": false,
+                "price": "44.82",
+                "price_set": {
+                  "shop_money": {
+                    "amount": "44.82",
+                    "currency_code": "INR"
+                  },
+                  "presentment_money": {
+                    "amount": "44.82",
+                    "currency_code": "INR"
+                  }
+                },
+                "rate": 0.18,
+                "title": "IGST"
+              }
+            ],
+            "duties": [],
+            "discount_allocations": []
+          }
+        ],
+        "payment_terms": null,
+        "refunds": [],
+        "shipping_lines": []
+      },
+      {
+        "id": 4942255521979,
+        "admin_graphql_api_id": "gid://shopify/Order/4942255521979",
+        "app_id": 1354745,
+        "browser_ip": null,
+        "buyer_accepts_marketing": false,
+        "cancel_reason": null,
+        "cancelled_at": null,
+        "cart_token": null,
+        "checkout_id": 26870492070075,
+        "checkout_token": "90dff429fcf77a7956269522a20fc256",
+        "client_details": {
+          "accept_language": null,
+          "browser_height": null,
+          "browser_ip": null,
+          "browser_width": null,
+          "session_hash": null,
+          "user_agent": null
+        },
+        "closed_at": null,
+        "confirmed": true,
+        "contact_email": null,
+        "created_at": "2023-03-10T10:59:14+05:30",
+        "currency": "INR",
+        "current_subtotal_price": "209.98",
+        "current_subtotal_price_set": {
+          "shop_money": {
+            "amount": "209.98",
+            "currency_code": "INR"
+          },
+          "presentment_money": {
+            "amount": "209.98",
+            "currency_code": "INR"
+          }
+        },
+        "current_total_discounts": "0.00",
+        "current_total_discounts_set": {
+          "shop_money": {
+            "amount": "0.00",
+            "currency_code": "INR"
+          },
+          "presentment_money": {
+            "amount": "0.00",
+            "currency_code": "INR"
+          }
+        },
+        "current_total_duties_set": null,
+        "current_total_price": "247.78",
+        "current_total_price_set": {
+          "shop_money": {
+            "amount": "247.78",
+            "currency_code": "INR"
+          },
+          "presentment_money": {
+            "amount": "247.78",
+            "currency_code": "INR"
+          }
+        },
+        "current_total_tax": "37.80",
+        "current_total_tax_set": {
+          "shop_money": {
+            "amount": "37.80",
+            "currency_code": "INR"
+          },
+          "presentment_money": {
+            "amount": "37.80",
+            "currency_code": "INR"
+          }
+        },
+        "customer_locale": null,
+        "device_id": null,
+        "discount_codes": [],
+        "email": "",
+        "estimated_taxes": false,
+        "financial_status": "paid",
+        "fulfillment_status": null,
+        "gateway": "manual",
+        "landing_site": null,
+        "landing_site_ref": null,
+        "location_id": 68443439291,
+        "name": "#1001",
+        "note": null,
+        "note_attributes": [],
+        "number": 1,
+        "order_number": 1001,
+        "order_status_url": "https://think-theme.myshopify.com/63281922235/orders/f0e0181196fc1b7456c03ea4016265ee/authenticate?key=f69f618eac5fd971e50ce6935c358f9c",
+        "original_total_duties_set": null,
+        "payment_gateway_names": [
+          "manual"
+        ],
+        "phone": null,
+        "presentment_currency": "INR",
+        "processed_at": "2023-03-10T10:59:14+05:30",
+        "processing_method": "manual",
+        "reference": null,
+        "referring_site": null,
+        "source_identifier": null,
+        "source_name": "shopify_draft_order",
+        "source_url": null,
+        "subtotal_price": "209.98",
+        "subtotal_price_set": {
+          "shop_money": {
+            "amount": "209.98",
+            "currency_code": "INR"
+          },
+          "presentment_money": {
+            "amount": "209.98",
+            "currency_code": "INR"
+          }
+        },
+        "tags": "",
+        "tax_lines": [
+          {
+            "price": "37.80",
+            "rate": 0.18,
+            "title": "IGST",
+            "price_set": {
+              "shop_money": {
+                "amount": "37.80",
+                "currency_code": "INR"
+              },
+              "presentment_money": {
+                "amount": "37.80",
+                "currency_code": "INR"
+              }
+            },
+            "channel_liable": false
+          }
+        ],
+        "taxes_included": false,
+        "test": false,
+        "token": "f0e0181196fc1b7456c03ea4016265ee",
+        "total_discounts": "0.00",
+        "total_discounts_set": {
+          "shop_money": {
+            "amount": "0.00",
+            "currency_code": "INR"
+          },
+          "presentment_money": {
+            "amount": "0.00",
+            "currency_code": "INR"
+          }
+        },
+        "total_line_items_price": "209.98",
+        "total_line_items_price_set": {
+          "shop_money": {
+            "amount": "209.98",
+            "currency_code": "INR"
+          },
+          "presentment_money": {
+            "amount": "209.98",
+            "currency_code": "INR"
+          }
+        },
+        "total_outstanding": "0.00",
+        "total_price": "247.78",
+        "total_price_set": {
+          "shop_money": {
+            "amount": "247.78",
+            "currency_code": "INR"
+          },
+          "presentment_money": {
+            "amount": "247.78",
+            "currency_code": "INR"
+          }
+        },
+        "total_price_usd": "3.02",
+        "total_shipping_price_set": {
+          "shop_money": {
+            "amount": "0.00",
+            "currency_code": "INR"
+          },
+          "presentment_money": {
+            "amount": "0.00",
+            "currency_code": "INR"
+          }
+        },
+        "total_tax": "37.80",
+        "total_tax_set": {
+          "shop_money": {
+            "amount": "37.80",
+            "currency_code": "INR"
+          },
+          "presentment_money": {
+            "amount": "37.80",
+            "currency_code": "INR"
+          }
+        },
+        "total_tip_received": "0.00",
+        "total_weight": 0,
+        "updated_at": "2023-03-10T10:59:15+05:30",
+        "user_id": 82209964219,
+        "discount_applications": [],
+        "fulfillments": [],
+        "line_items": [
+          {
+            "id": 12134240387259,
+            "admin_graphql_api_id": "gid://shopify/LineItem/12134240387259",
+            "fulfillable_quantity": 1,
+            "fulfillment_service": "manual",
+            "fulfillment_status": null,
+            "gift_card": false,
+            "grams": 0,
+            "name": "ADIDAS | CLASSIC BACKPACK | LEGEND INK MULTICOLOUR - OS / blue",
+            "origin_location": {
+              "id": 3530194256059,
+              "country_code": "IN",
+              "province_code": "UP",
+              "name": "Lucknow",
+              "address1": "Lucknow",
+              "address2": "",
+              "city": "Lucknow",
+              "zip": "226005"
+            },
+            "price": "50.00",
+            "price_set": {
+              "shop_money": {
+                "amount": "50.00",
+                "currency_code": "INR"
+              },
+              "presentment_money": {
+                "amount": "50.00",
+                "currency_code": "INR"
+              }
+            },
+            "product_exists": true,
+            "product_id": 7802795786427,
+            "properties": [],
+            "quantity": 1,
+            "requires_shipping": true,
+            "sku": "AD-04\r\n-blue-OS",
+            "taxable": true,
+            "title": "ADIDAS | CLASSIC BACKPACK | LEGEND INK MULTICOLOUR",
+            "total_discount": "0.00",
+            "total_discount_set": {
+              "shop_money": {
+                "amount": "0.00",
+                "currency_code": "INR"
+              },
+              "presentment_money": {
+                "amount": "0.00",
+                "currency_code": "INR"
+              }
+            },
+            "variant_id": 44514161000635,
+            "variant_inventory_management": "shopify",
+            "variant_title": "OS / blue",
+            "vendor": "ADIDAS",
+            "tax_lines": [
+              {
+                "channel_liable": false,
+                "price": "9.00",
+                "price_set": {
+                  "shop_money": {
+                    "amount": "9.00",
+                    "currency_code": "INR"
+                  },
+                  "presentment_money": {
+                    "amount": "9.00",
+                    "currency_code": "INR"
+                  }
+                },
+                "rate": 0.18,
+                "title": "IGST"
+              }
+            ],
+            "duties": [],
+            "discount_allocations": []
+          },
+          {
+            "id": 12134240420027,
+            "admin_graphql_api_id": "gid://shopify/LineItem/12134240420027",
+            "fulfillable_quantity": 1,
+            "fulfillment_service": "manual",
+            "fulfillment_status": null,
+            "gift_card": false,
+            "grams": 0,
+            "name": "ADIDAS | CLASSIC BACKPACK - OS / black",
+            "origin_location": {
+              "id": 3530194256059,
+              "country_code": "IN",
+              "province_code": "UP",
+              "name": "Lucknow",
+              "address1": "Lucknow",
+              "address2": "",
+              "city": "Lucknow",
+              "zip": "226005"
+            },
+            "price": "70.00",
+            "price_set": {
+              "shop_money": {
+                "amount": "70.00",
+                "currency_code": "INR"
+              },
+              "presentment_money": {
+                "amount": "70.00",
+                "currency_code": "INR"
+              }
+            },
+            "product_exists": true,
+            "product_id": 7802795753659,
+            "properties": [],
+            "quantity": 1,
+            "requires_shipping": true,
+            "sku": "AD-03-black-OS",
+            "taxable": true,
+            "title": "ADIDAS | CLASSIC BACKPACK",
+            "total_discount": "0.00",
+            "total_discount_set": {
+              "shop_money": {
+                "amount": "0.00",
+                "currency_code": "INR"
+              },
+              "presentment_money": {
+                "amount": "0.00",
+                "currency_code": "INR"
+              }
+            },
+            "variant_id": 44514160967867,
+            "variant_inventory_management": "shopify",
+            "variant_title": "OS / black",
+            "vendor": "ADIDAS",
+            "tax_lines": [
+              {
+                "channel_liable": false,
+                "price": "12.60",
+                "price_set": {
+                  "shop_money": {
+                    "amount": "12.60",
+                    "currency_code": "INR"
+                  },
+                  "presentment_money": {
+                    "amount": "12.60",
+                    "currency_code": "INR"
+                  }
+                },
+                "rate": 0.18,
+                "title": "IGST"
+              }
+            ],
+            "duties": [],
+            "discount_allocations": []
+          },
+          {
+            "id": 12134240452795,
+            "admin_graphql_api_id": "gid://shopify/LineItem/12134240452795",
+            "fulfillable_quantity": 1,
+            "fulfillment_service": "manual",
+            "fulfillment_status": null,
+            "gift_card": false,
+            "grams": 0,
+            "name": "NIKE | SWOOSH PRO FLAT PEAK CAP - OS / white",
+            "origin_location": {
+              "id": 3530194256059,
+              "country_code": "IN",
+              "province_code": "UP",
+              "name": "Lucknow",
+              "address1": "Lucknow",
+              "address2": "",
+              "city": "Lucknow",
+              "zip": "226005"
+            },
+            "price": "30.00",
+            "price_set": {
+              "shop_money": {
+                "amount": "30.00",
+                "currency_code": "INR"
+              },
+              "presentment_money": {
+                "amount": "30.00",
+                "currency_code": "INR"
+              }
+            },
+            "product_exists": true,
+            "product_id": 7802795720891,
+            "properties": [],
+            "quantity": 1,
+            "requires_shipping": true,
+            "sku": "NK-03-white-OS",
+            "taxable": true,
+            "title": "NIKE | SWOOSH PRO FLAT PEAK CAP",
+            "total_discount": "0.00",
+            "total_discount_set": {
+              "shop_money": {
+                "amount": "0.00",
+                "currency_code": "INR"
+              },
+              "presentment_money": {
+                "amount": "0.00",
+                "currency_code": "INR"
+              }
+            },
+            "variant_id": 44514160935099,
+            "variant_inventory_management": "shopify",
+            "variant_title": "OS / white",
+            "vendor": "NIKE",
+            "tax_lines": [
+              {
+                "channel_liable": false,
+                "price": "5.40",
+                "price_set": {
+                  "shop_money": {
+                    "amount": "5.40",
+                    "currency_code": "INR"
+                  },
+                  "presentment_money": {
+                    "amount": "5.40",
+                    "currency_code": "INR"
+                  }
+                },
+                "rate": 0.18,
+                "title": "IGST"
+              }
+            ],
+            "duties": [],
+            "discount_allocations": []
+          },
+          {
+            "id": 12134240485563,
+            "admin_graphql_api_id": "gid://shopify/LineItem/12134240485563",
+            "fulfillable_quantity": 1,
+            "fulfillment_service": "manual",
+            "fulfillment_status": null,
+            "gift_card": false,
+            "grams": 0,
+            "name": "FLEX FIT | MINI OTTOMAN BLACK - m / black",
+            "origin_location": {
+              "id": 3530194256059,
+              "country_code": "IN",
+              "province_code": "UP",
+              "name": "Lucknow",
+              "address1": "Lucknow",
+              "address2": "",
+              "city": "Lucknow",
+              "zip": "226005"
+            },
+            "price": "29.99",
+            "price_set": {
+              "shop_money": {
+                "amount": "29.99",
+                "currency_code": "INR"
+              },
+              "presentment_money": {
+                "amount": "29.99",
+                "currency_code": "INR"
+              }
+            },
+            "product_exists": true,
+            "product_id": 7802795655355,
+            "properties": [],
+            "quantity": 1,
+            "requires_shipping": true,
+            "sku": "FF-01-black-m",
+            "taxable": true,
+            "title": "FLEX FIT | MINI OTTOMAN BLACK",
+            "total_discount": "0.00",
+            "total_discount_set": {
+              "shop_money": {
+                "amount": "0.00",
+                "currency_code": "INR"
+              },
+              "presentment_money": {
+                "amount": "0.00",
+                "currency_code": "INR"
+              }
+            },
+            "variant_id": 44514160574651,
+            "variant_inventory_management": "shopify",
+            "variant_title": "m / black",
+            "vendor": "FLEX FIT",
+            "tax_lines": [
+              {
+                "channel_liable": false,
+                "price": "5.40",
+                "price_set": {
+                  "shop_money": {
+                    "amount": "5.40",
+                    "currency_code": "INR"
+                  },
+                  "presentment_money": {
+                    "amount": "5.40",
+                    "currency_code": "INR"
+                  }
+                },
+                "rate": 0.18,
+                "title": "IGST"
+              }
+            ],
+            "duties": [],
+            "discount_allocations": []
+          },
+          {
+            "id": 12134240518331,
+            "admin_graphql_api_id": "gid://shopify/LineItem/12134240518331",
+            "fulfillable_quantity": 1,
+            "fulfillment_service": "manual",
+            "fulfillment_status": null,
+            "gift_card": false,
+            "grams": 0,
+            "name": "FLEX FIT | MINI OTTOMAN BLACK - xl / black",
+            "origin_location": {
+              "id": 3530194256059,
+              "country_code": "IN",
+              "province_code": "UP",
+              "name": "Lucknow",
+              "address1": "Lucknow",
+              "address2": "",
+              "city": "Lucknow",
+              "zip": "226005"
+            },
+            "price": "29.99",
+            "price_set": {
+              "shop_money": {
+                "amount": "29.99",
+                "currency_code": "INR"
+              },
+              "presentment_money": {
+                "amount": "29.99",
+                "currency_code": "INR"
+              }
+            },
+            "product_exists": true,
+            "product_id": 7802795655355,
+            "properties": [],
+            "quantity": 1,
+            "requires_shipping": true,
+            "sku": "FF-01-black-xl",
+            "taxable": true,
+            "title": "FLEX FIT | MINI OTTOMAN BLACK",
+            "total_discount": "0.00",
+            "total_discount_set": {
+              "shop_money": {
+                "amount": "0.00",
+                "currency_code": "INR"
+              },
+              "presentment_money": {
+                "amount": "0.00",
+                "currency_code": "INR"
+              }
+            },
+            "variant_id": 44514160640187,
+            "variant_inventory_management": "shopify",
+            "variant_title": "xl / black",
+            "vendor": "FLEX FIT",
+            "tax_lines": [
+              {
+                "channel_liable": false,
+                "price": "5.40",
+                "price_set": {
+                  "shop_money": {
+                    "amount": "5.40",
+                    "currency_code": "INR"
+                  },
+                  "presentment_money": {
+                    "amount": "5.40",
+                    "currency_code": "INR"
+                  }
+                },
+                "rate": 0.18,
+                "title": "IGST"
+              }
+            ],
+            "duties": [],
+            "discount_allocations": []
+          }
+        ],
+        "payment_terms": null,
+        "refunds": [],
+        "shipping_lines": []
+      }
+    ]
+  }
