@@ -37,14 +37,14 @@ const Header = () => {
       </div>
 
       <div className="flex flex-col gap-4">
-        <Link className="flex items-center" to="orders">
+        <Link className="flex items-center" to="settings">
           <Cog6ToothIcon
             className="h-5 w-5 text-green-100 hover:text-white"
             aria-hidden="true"
           />
           <span className="sr-only">Settings</span>
         </Link>
-        <Link className="flex items-center" to="products">
+        <Link className="flex items-center" to="account">
           <UserCircleIcon
             className="h-5 w-5 text-green-100 hover:text-white"
             aria-hidden="true"
