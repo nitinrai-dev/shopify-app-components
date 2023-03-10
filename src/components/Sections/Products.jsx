@@ -100,7 +100,7 @@ import {
   
     return (
       <>
-        <div className="h-full relative product--board bg-gray-50">
+        <div className="h-full relative">
           <div className="flex items-center justify-between px-3 py-4 md:px-6">
             <h2 className="text-2xl font-semibold text-green-800">
               Products

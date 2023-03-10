@@ -4,7 +4,7 @@ const Layout = ({ children }) => {
   return (
     <div className="flex">
       <Header />
-      <main className="w-full h-screen p-6">{children}</main>
+      <main className="w-full h-screen overflow-auto bg-gray-50">{children}</main>
     </div>
   );
 };
