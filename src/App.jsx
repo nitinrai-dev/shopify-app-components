@@ -5,7 +5,7 @@ import {
   PencilSquareIcon,
 } from "@heroicons/react/20/solid";
 import { useState, useEffect } from "react";
-import productData from "./assets/products";
+import products from "./assets/product";
 import Drawer from "./components/Drawer";
 
 const itemsPerPage = 10;
@@ -17,6 +17,8 @@ export default function App() {
   const [allSelected, setAllSelected] = useState(false);
   const [selectedProducts, setSelectedProducts] = useState([]);
   const [search, setSearch] = useState("");
+
+  const productData = products.products;
 
   const productStatus = [
     ...new Set(productData.map((product) => product.status)),
@@ -199,7 +201,7 @@ export default function App() {
                     </div>
                   </th>
                   {selectedProducts.length > 0 ? (
-                    <th scope="col" colspan="5" className="px-3 py-3 md:px-6">
+                    <th scope="col" colSpan="6" className="px-3 py-3 md:px-6">
                       {selectedProducts.length}{" "}
                       <span className="lowercase">products selected.</span>
                     </th>
@@ -306,7 +308,7 @@ export default function App() {
                     </td>
                     <td className="px-3 py-4 md:px-6">{item?.product_type}</td>
                     <td className="px-3 py-4 md:px-6">{item?.vendor}</td>
-                    <td className="px-3 py-4 md:px-6">{item?.variants.length}</td>
+                    <td className="px-3 py-4 md:px-6">{item?.variants.map((item) => item.inventory_quantity).reduce((sum, item) => sum + item, 0)} is stock for {item?.variants.length} variants</td>
                     <td className="px-3 py-4 md:px-6">
                       {/* <!-- Modal toggle --> */}
                       <a
