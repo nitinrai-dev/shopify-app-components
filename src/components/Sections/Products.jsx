@@ -5,13 +5,13 @@ import {
     AdjustmentsVerticalIcon,
     PencilSquareIcon,
   } from "@heroicons/react/20/solid";
-  // import products from "../../assets/products.json";
+  import products from "../../assets/products.json";
   import Drawer from "../Drawer";
   
   const itemsPerPage = 10;
   
   export default function Products() {
-    const [productData, setProductData] = useState([]);
+    // const [productData, setProductData] = useState([]);
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
     const [selectedTab, setSelectedTab] = useState("all");
@@ -19,29 +19,29 @@ import {
     const [selectedProducts, setSelectedProducts] = useState([]);
     const [search, setSearch] = useState("");
 
-    useEffect(() => {
-      const APIKEY = import.meta.env.VITE_SHOPIFY_ACCESS_TOKEN;
-      const fetchData = async () => {
-        try {
-          const response = await fetch('https://think-theme.myshopify.com/admin/api/2023-01/products.json', {
-            method: 'GET',
-            headers: { 
-              'X-Shopify-Access-Token': APIKEY, 
-              'Content-Type': 'application/json'
-            },
-            redirect: 'follow'
-          });
-          const jsonData = await response.json();
-          setProductData(jsonData);
-          console.log(jsonData);
-        } catch (error) {
-          console.error(error);
-        }
-      };
-      fetchData();
-    }, []);
+    // useEffect(() => {
+    //   const APIKEY = import.meta.env.VITE_SHOPIFY_ACCESS_TOKEN;
+    //   const fetchData = async () => {
+    //     try {
+    //       const response = await fetch('https://think-theme.myshopify.com/admin/api/2023-01/products.json', {
+    //         method: 'GET',
+    //         headers: { 
+    //           'X-Shopify-Access-Token': APIKEY, 
+    //           'Content-Type': 'application/json'
+    //         },
+    //         redirect: 'follow'
+    //       });
+    //       const jsonData = await response.json();
+    //       setProductData(jsonData);
+    //       console.log(jsonData);
+    //     } catch (error) {
+    //       console.error(error);
+    //     }
+    //   };
+    //   fetchData();
+    // }, []);
 
-    // const productData = products.products;
+    const productData = products.products;
   
     const productStatus = [
       ...new Set(productData.map((product) => product.status)),
