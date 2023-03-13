@@ -13,7 +13,7 @@ import {
   export default function Products() {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
-    const [selectedCategory, setSelectedCategory] = useState("all");
+    const [selectedTab, setSelectedTab] = useState("all");
     const [allSelected, setAllSelected] = useState(false);
     const [selectedProducts, setSelectedProducts] = useState([]);
     const [search, setSearch] = useState("");
@@ -24,6 +24,7 @@ import {
       ...new Set(productData.map((product) => product.status)),
     ];
     productStatus.unshift("all");
+    
     const productTypes = [
       ...new Set(productData.map((product) => product.product_type)),
     ];
@@ -48,7 +49,7 @@ import {
     useEffect(() => {
       setAllSelected(false);
       setSelectedProducts([]);
-    }, [selectedCategory, search]);
+    }, [selectedTab, search]);
   
     useEffect(() => {
       setAllSelected(false);
@@ -57,7 +58,7 @@ import {
   
     const filteredData = productData.filter((item) => {
       const matchesCategory =
-        selectedCategory === "all" || item.status === selectedCategory;
+        selectedTab === "all" || item.status === selectedTab;
       const matchesSearch = item.title
         .toLowerCase()
         .includes(search.toLowerCase());
@@ -75,7 +76,7 @@ import {
     };
   
     const handleCategoryChange = (category) => {
-      setSelectedCategory(category);
+      setSelectedTab(category);
       setCurrentPage(1);
     };
   
@@ -125,7 +126,7 @@ import {
                     <a
                       href="#"
                       className={`inline-block px-4 py-3 rounded-lg font-semibold ${
-                        category === selectedCategory
+                        category === selectedTab
                           ? "text-green-700 bg-green-50 active"
                           : "hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white"
                       }`}
@@ -159,7 +160,7 @@ import {
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
                     className="block w-full lg:w-80 p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg focus:outline-none focus:border-transparent focus:ring-1 focus:ring-green-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                    placeholder={`Search ${selectedCategory} products`}
+                    placeholder={`Search ${selectedTab} products`}
                   />
                 </div>
   
